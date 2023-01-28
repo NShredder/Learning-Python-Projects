@@ -1,0 +1,17 @@
+shopping_list = []
+print("You have", shopping_list, "in your basket.")
+print("Do you want to add more?")
+print("Type END to finish adding to your basket and DELETE ALL to clear it.")
+question = input("Y / N?   ")
+while question.upper() == "Y":  # This makes it can only accept the Y as an answer all else continues to exit message
+    adding = input(">")
+    if adding.upper() == "END":
+        exit("Goodbye")
+    if adding.upper() == "DELETE ALL":
+        shopping_list.clear()
+        print(shopping_list)
+        print("List emptied")
+        exit("Goodbye")
+    shopping_list.append(adding)
+    print(shopping_list)
+exit("Goodbye")
